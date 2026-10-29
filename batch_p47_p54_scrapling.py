@@ -269,7 +269,7 @@ TARGETS=[
       ["BetterLiving","Orientation Signage","Bedroom"],["Bedroom"],"BL0036BE"),
     Target(50,465,"Mobility Zone","Orientation Sign for Dementia - Bedroom",
       "https://mobilityzone.com.au/product/orientation-signage-better-living/",
-      ["Orientation Signage","Better Living"],["Bedroom"],None),
+      ["Orientation Signage"],["Bedroom"],None),
 
     Target(51,445,"Patient Handling","Orientation Sign for Dementia - Kitchen",
       "https://www.patienthandling.com.au/product/betterliving-orientation-signage-kitchen-sticker/",
@@ -285,7 +285,7 @@ TARGETS=[
       ["BetterLiving","Orientation Signage","Kitchen"],["Kitchen"],"BL0036K"),
     Target(51,464,"Mobility Zone","Orientation Sign for Dementia - Kitchen",
       "https://mobilityzone.com.au/product/orientation-signage-better-living/",
-      ["Orientation Signage","Better Living"],["Kitchen"],None),
+      ["Orientation Signage"],["Kitchen"],None),
 
     Target(52,446,"Australian Assistive Technology Centre","Orientation Signage for Dementia - Bathroom",
       "https://www.australianatc.com.au/products/betterliving-orientation-signage-cc",
@@ -298,7 +298,7 @@ TARGETS=[
       ["BetterLiving","Orientation Signage","Bathroom"],["Bathroom"],"BL0036SHBA"),
     Target(52,463,"Mobility Zone","Orientation Signage for Dementia - Bathroom",
       "https://mobilityzone.com.au/product/orientation-signage-better-living/",
-      ["Orientation Signage","Better Living"],["Bathroom"],None),
+      ["Orientation Signage"],["Bathroom"],None),
 
     Target(53,472,"Australian Assistive Technology Centre","Orientation Signage for Dementia - Toilet",
       "https://www.australianatc.com.au/products/betterliving-orientation-signage-cc",
@@ -311,7 +311,7 @@ TARGETS=[
       ["BetterLiving","Orientation Signage","Toilet"],["Toilet"],"BL0036T"),
     Target(53,487,"Mobility Zone","Orientation Signage for Dementia - Toilet",
       "https://mobilityzone.com.au/product/orientation-signage-better-living/",
-      ["Orientation Signage","Better Living"],["Toilet"],None),
+      ["Orientation Signage"],["Toilet"],None),
 
     Target(54,467,"Patient Handling","Cleansing Kit - Confident Care",
       "https://www.patienthandling.com.au/product/confident-care-cleansing-kit/",
@@ -344,7 +344,7 @@ for t in TARGETS:
         if host in SHOPIFY_DOMAINS:
             r=shopify(t)
         elif host=="www.patienthandling.com.au":
-            r=exact_product_price(t,".summary .price, .elementor-widget-woocommerce-product-price .price","scrapling_patient_handling")
+            r=exact_product_price(t,".productSummary .priceSection .productPrice","scrapling_patient_handling_exact_product")
         elif host=="mobilityzone.com.au":
             opt=(t.variant_terms or [None])[0]
             r=exact_product_price(t,".elementor-widget-woocommerce-product-price .price","scrapling_mobility_zone_family_price",allow_family_option=opt)
