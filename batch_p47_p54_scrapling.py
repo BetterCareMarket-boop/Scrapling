@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import html
 import json
 import re
 from dataclasses import asdict, dataclass
@@ -194,8 +195,10 @@ def exact_product_price(target: Target, selector: str, method: str, allow_family
     if not blocks:
         blocks=page.css("h1").getall()+page.css(".summary").getall()
     blob=" ".join(blocks)
+    blob_text=html.unescape(re.sub(r"<[^>]+>", " ", blob))
+    blob_text=re.sub(r"\s+", " ", blob_text)
     vals=[]
-    for raw in re.findall(r"\$\s*([0-9][0-9,]*(?:\.[0-9]{1,2})?)",blob):
+    for raw in re.findall(r"\$\s*([0-9][0-9,]*(?:\.[0-9]{1,2})?)",blob_text):
         v=money(raw)
         if v is not None and v>0:
             vals.append(v)
