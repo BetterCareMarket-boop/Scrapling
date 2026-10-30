@@ -1,0 +1,23 @@
+name: Audit missing NOVIS prices
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install "scrapling[fetchers]==0.5"
+      - run: python novis_missing_scrapling.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: novis-missing-price-audit
+          path: |
+            novis_missing_results.json
+            novis_missing_results.csv
