@@ -1,0 +1,1055 @@
+[
+  {
+    "mapping_id": 317,
+    "sku": "BL0040B",
+    "product_name": "Dementia Door Sticker - Bookcase",
+    "competitor_name": "Australian Assistive Technology Centre",
+    "competitor_url": "https://www.australianatc.com.au/products/betterliving-door-murals-cc",
+    "competitor_sku": null,
+    "competitor_variant_hint": "LOCK VARIANT: Bookshelf only / BL0040B. 2100 x 900 mm. Do not use Books & Frames, Crockery Shelf, Sideboard or Pot Plants."
+  },
+  {
+    "mapping_id": 318,
+    "sku": "BL0039",
+    "product_name": "Stop Sign Sticker - for dementia",
+    "competitor_name": "Australian Assistive Technology Centre",
+    "competitor_url": "https://www.australianatc.com.au/products/betterliving-stop-banner-cc",
+    "competitor_sku": null,
+    "competitor_variant_hint": "Exact BetterLiving Stop Banner BL0039 identity: 1200 x 200 mm. Not orientation signage."
+  },
+  {
+    "mapping_id": 327,
+    "sku": "BL0040B",
+    "product_name": "Dementia Door Sticker - Bookcase",
+    "competitor_name": "Mobility Aids For You",
+    "competitor_url": "https://mobilityaidsforyou.com.au/products/betterliving-door-murals",
+    "competitor_sku": null,
+    "competitor_variant_hint": "LOCK VARIANT: Bookshelf only / BL0040B. 2100 x 900 mm. Do not use other mural styles."
+  },
+  {
+    "mapping_id": 328,
+    "sku": "BL0039",
+    "product_name": "Stop Sign Sticker - for dementia",
+    "competitor_name": "Mobility Aids For You",
+    "competitor_url": "https://mobilityaidsforyou.com.au/products/betterliving-stop-banner",
+    "competitor_sku": null,
+    "competitor_variant_hint": "Exact BetterLiving Stop Banner BL0039 identity: 1200 x 200 mm. Not orientation signage."
+  },
+  {
+    "mapping_id": 331,
+    "sku": "BL0065EG",
+    "product_name": "Sensory Cushion - Emerald Green",
+    "competitor_name": "Australian Assistive Technology Centre",
+    "competitor_url": "https://www.australianatc.com.au/products/betterliving-sensory-cushion-cc",
+    "competitor_sku": "BL0065EG",
+    "competitor_variant_hint": "LOCK VARIANT: Emerald Green / BL0065EG only, 390 x 390 mm. Do not use King Fisher Blue."
+  },
+  {
+    "mapping_id": 332,
+    "sku": "BL0040A",
+    "product_name": "Dementia Door Sticker - Bookshelf",
+    "competitor_name": "Australian Assistive Technology Centre",
+    "competitor_url": "https://www.australianatc.com.au/products/betterliving-door-murals-cc",
+    "competitor_sku": "BL0040A",
+    "competitor_variant_hint": "LOCK VARIANT: Books / Books & Frames / BL0040A only. NOTE BCM title says Bookshelf, but supplier code BL0040A is Books/Books & Frames; BL0040B is Bookshelf."
+  },
+  {
+    "mapping_id": 333,
+    "sku": "BL0040E",
+    "product_name": "Dementia Door Sticker - Pot Plants",
+    "competitor_name": "Australian Assistive Technology Centre",
+    "competitor_url": "https://www.australianatc.com.au/products/betterliving-door-murals-cc",
+    "competitor_sku": null,
+    "competitor_variant_hint": "LOCK VARIANT: Pot Plants / BL0040E only. 2100 x 900 mm. Do not use other mural styles."
+  },
+  {
+    "mapping_id": 334,
+    "sku": "BL0040D",
+    "product_name": "Dementia Door Sticker- Kitchen Sideboard",
+    "competitor_name": "Australian Assistive Technology Centre",
+    "competitor_url": "https://www.australianatc.com.au/products/betterliving-door-murals-cc",
+    "competitor_sku": null,
+    "competitor_variant_hint": "LOCK VARIANT: Sideboard / BL0040D only. 2100 x 900 mm. Do not use other mural styles."
+  },
+  {
+    "mapping_id": 335,
+    "sku": "BL0040C",
+    "product_name": "Dementia Door Sticker - Crockery Shelf",
+    "competitor_name": "Australian Assistive Technology Centre",
+    "competitor_url": "https://www.australianatc.com.au/products/betterliving-door-murals-cc",
+    "competitor_sku": null,
+    "competitor_variant_hint": "LOCK VARIANT: Crockery Shelf / BL0040C only. 2100 x 900 mm. Do not use other mural styles."
+  },
+  {
+    "mapping_id": 336,
+    "sku": "BL0065EG",
+    "product_name": "Sensory Cushion - Emerald Green",
+    "competitor_name": "Mobility Aids For You",
+    "competitor_url": "https://mobilityaidsforyou.com.au/products/betterliving-sensory-cushion",
+    "competitor_sku": "BL0065EG",
+    "competitor_variant_hint": "LOCK VARIANT: Emerald Green / BL0065EG only, 390 x 390 mm. Do not use King Fisher Blue."
+  },
+  {
+    "mapping_id": 337,
+    "sku": "BL0040A",
+    "product_name": "Dementia Door Sticker - Bookshelf",
+    "competitor_name": "Mobility Aids For You",
+    "competitor_url": "https://mobilityaidsforyou.com.au/products/betterliving-door-murals",
+    "competitor_sku": "BL0040A",
+    "competitor_variant_hint": "LOCK VARIANT: Books / Books & Frames / BL0040A only. Do not map this as Bookshelf; BL0040B is Bookshelf."
+  },
+  {
+    "mapping_id": 338,
+    "sku": "BL0040E",
+    "product_name": "Dementia Door Sticker - Pot Plants",
+    "competitor_name": "Mobility Aids For You",
+    "competitor_url": "https://mobilityaidsforyou.com.au/products/betterliving-door-murals",
+    "competitor_sku": null,
+    "competitor_variant_hint": "LOCK VARIANT: Pot Plants / BL0040E only. 2100 x 900 mm. Do not use other mural styles."
+  },
+  {
+    "mapping_id": 339,
+    "sku": "BL0040D",
+    "product_name": "Dementia Door Sticker- Kitchen Sideboard",
+    "competitor_name": "Mobility Aids For You",
+    "competitor_url": "https://mobilityaidsforyou.com.au/products/betterliving-door-murals",
+    "competitor_sku": null,
+    "competitor_variant_hint": "LOCK VARIANT: Sideboard / BL0040D only. 2100 x 900 mm. Do not use other mural styles."
+  },
+  {
+    "mapping_id": 340,
+    "sku": "BL0040C",
+    "product_name": "Dementia Door Sticker - Crockery Shelf",
+    "competitor_name": "Mobility Aids For You",
+    "competitor_url": "https://mobilityaidsforyou.com.au/products/betterliving-door-murals",
+    "competitor_sku": null,
+    "competitor_variant_hint": "LOCK VARIANT: Crockery Shelf / BL0040C only. 2100 x 900 mm. Do not use other mural styles."
+  },
+  {
+    "mapping_id": 345,
+    "sku": "BL0065EG",
+    "product_name": "Sensory Cushion - Emerald Green",
+    "competitor_name": "Solutions Medical",
+    "competitor_url": "https://www.solutionsmedical.net.au/index.php?product_id=5201&route=product%2Fproduct",
+    "competitor_sku": "BL0065EG-KFB",
+    "competitor_variant_hint": "LOCK VARIANT: Emerald Green / BL0065EG only. Product page covers BetterLiving sensory cushion colour family and product code includes BL0065EG-KFB."
+  },
+  {
+    "mapping_id": 346,
+    "sku": "80505004",
+    "product_name": "Aktiv Reacher 45cm - Etac",
+    "competitor_name": "Better Support Australia",
+    "competitor_url": "https://bettersupport.com.au/shop/etac-reacher-grabber-45cm/",
+    "competitor_sku": "80505004",
+    "competitor_variant_hint": "Exact 45 cm / SKU 80505004 Etac Aktiv Reacher."
+  },
+  {
+    "mapping_id": 347,
+    "sku": "80210070",
+    "product_name": "Long Handled Hair Comb (Long) - Etac",
+    "competitor_name": "Australian Assistive Technology Centre",
+    "competitor_url": "https://www.australianatc.com.au/products/etac-beauty-grooming-comb-long-370mm",
+    "competitor_sku": "80210070",
+    "competitor_variant_hint": "Exact Long 370 mm / Etac 80210070."
+  },
+  {
+    "mapping_id": 348,
+    "sku": "31003",
+    "product_name": "Handy Bar - Stander",
+    "competitor_name": "Australian Assistive Technology Centre",
+    "competitor_url": "https://www.australianatc.com.au/products/handybar-cc",
+    "competitor_sku": "31003",
+    "competitor_variant_hint": "Exact Stander/Handybar vehicle transfer handle, supplier SKU 31003."
+  },
+  {
+    "mapping_id": 349,
+    "sku": "BL0065KFB",
+    "product_name": "Sensory Cushion - King Fisher Blue",
+    "competitor_name": "Australian Assistive Technology Centre",
+    "competitor_url": "https://www.australianatc.com.au/products/betterliving-sensory-cushion-cc",
+    "competitor_sku": "BL0065KFB",
+    "competitor_variant_hint": "LOCK VARIANT: King Fisher Blue / BL0065KFB only, 390 x 390 mm. Do not use Emerald Green."
+  },
+  {
+    "mapping_id": 350,
+    "sku": "80210068",
+    "product_name": "Long Handled Beauty Comb (Medium) - Etac",
+    "competitor_name": "Arthritis Solutions",
+    "competitor_url": "https://www.arthritissolutions.com.au/Comb-Hair-grooming-aid-Product-Code-ETAC-80210068.html",
+    "competitor_sku": "80210068",
+    "competitor_variant_hint": "Exact Etac Beauty Comb Standard/short 30 cm / 80210068."
+  },
+  {
+    "mapping_id": 351,
+    "sku": "80505004",
+    "product_name": "Aktiv Reacher 45cm - Etac",
+    "competitor_name": "Arthritis Solutions",
+    "competitor_url": "https://www.arthritissolutions.com.au/Reacher-Aktiv-45-cm.-Product-Code-ETAC-80505004.html",
+    "competitor_sku": "80505004",
+    "competitor_variant_hint": "Exact Etac Aktiv Reacher 45 cm / 80505004."
+  },
+  {
+    "mapping_id": 352,
+    "sku": "BL0065KFB",
+    "product_name": "Sensory Cushion - King Fisher Blue",
+    "competitor_name": "Surgical House",
+    "competitor_url": "https://surgicalhouse.com.au/Product.php?id=BL0065KFB",
+    "competitor_sku": "BL0065KFB",
+    "competitor_variant_hint": "Exact King Fisher Blue / BL0065KFB product page, 390 x 390 mm."
+  },
+  {
+    "mapping_id": 353,
+    "sku": "80210070",
+    "product_name": "Long Handled Hair Comb (Long) - Etac",
+    "competitor_name": "Mobility Aids For You",
+    "competitor_url": "https://mobilityaidsforyou.com.au/products/etac-beauty-comb",
+    "competitor_sku": "80210070",
+    "competitor_variant_hint": "LOCK VARIANT: Long 370 mm / 80210070 only. Do not use Standard 80210068."
+  },
+  {
+    "mapping_id": 354,
+    "sku": "80210068",
+    "product_name": "Long Handled Beauty Comb (Medium) - Etac",
+    "competitor_name": "Mobility Aids For You",
+    "competitor_url": "https://mobilityaidsforyou.com.au/products/etac-beauty-comb",
+    "competitor_sku": "80210068",
+    "competitor_variant_hint": "LOCK VARIANT: Standard/short 300 mm / 80210068 only. Do not use Long 80210070."
+  },
+  {
+    "mapping_id": 355,
+    "sku": "80505004",
+    "product_name": "Aktiv Reacher 45cm - Etac",
+    "competitor_name": "Mobility Aids For You",
+    "competitor_url": "https://mobilityaidsforyou.com.au/products/etac-aktiv-reacher",
+    "competitor_sku": "80505004",
+    "competitor_variant_hint": "LOCK VARIANT: 45 cm / 80505004 only. Do not use 60, 70, 80 or 90 cm variants."
+  },
+  {
+    "mapping_id": 356,
+    "sku": "BL0065KFB",
+    "product_name": "Sensory Cushion - King Fisher Blue",
+    "competitor_name": "Mobility Aids For You",
+    "competitor_url": "https://mobilityaidsforyou.com.au/products/betterliving-sensory-cushion",
+    "competitor_sku": "BL0065KFB",
+    "competitor_variant_hint": "LOCK VARIANT: King Fisher Blue / BL0065KFB only, 390 x 390 mm. Do not use Emerald Green."
+  },
+  {
+    "mapping_id": 357,
+    "sku": "80210070",
+    "product_name": "Long Handled Hair Comb (Long) - Etac",
+    "competitor_name": "Solutions Medical",
+    "competitor_url": "https://www.solutionsmedical.net.au/index.php?product_id=5195&route=product%2Fproduct",
+    "competitor_sku": "SM80210070N",
+    "competitor_variant_hint": "LOCK VARIANT: LONG HANDLE / SM80210070N corresponding to Etac 80210070 / 370 mm."
+  },
+  {
+    "mapping_id": 358,
+    "sku": "80210068",
+    "product_name": "Long Handled Beauty Comb (Medium) - Etac",
+    "competitor_name": "Solutions Medical",
+    "competitor_url": "https://www.solutionsmedical.net.au/index.php?product_id=5195&route=product%2Fproduct",
+    "competitor_sku": "SM80210068N",
+    "competitor_variant_hint": "LOCK VARIANT: SHORT HANDLE / SM80210068N corresponding to Etac 80210068 / 300 mm."
+  },
+  {
+    "mapping_id": 359,
+    "sku": "BL0065KFB",
+    "product_name": "Sensory Cushion - King Fisher Blue",
+    "competitor_name": "Solutions Medical",
+    "competitor_url": "https://www.solutionsmedical.net.au/index.php?product_id=5201&route=product%2Fproduct",
+    "competitor_sku": "BL0065EG-KFB",
+    "competitor_variant_hint": "LOCK VARIANT: King Fisher Blue / BL0065KFB only. Shared colour-family product page; do not use Emerald Green."
+  },
+  {
+    "mapping_id": 360,
+    "sku": "31003",
+    "product_name": "Handy Bar - Stander",
+    "competitor_name": "Rehab Hire & Sales",
+    "competitor_url": "https://www.rehabhire.com.au/product/stander-handybar/",
+    "competitor_sku": "31003",
+    "competitor_variant_hint": "Exact Stander HandyBar SKU 31003."
+  },
+  {
+    "mapping_id": 361,
+    "sku": "31003",
+    "product_name": "Handy Bar - Stander",
+    "competitor_name": "Connect Mobility",
+    "competitor_url": "https://www.connectmobility.com.au/products/handybar",
+    "competitor_sku": "31003",
+    "competitor_variant_hint": "Exact HandyBar product code 31003."
+  },
+  {
+    "mapping_id": 362,
+    "sku": "80505004",
+    "product_name": "Aktiv Reacher 45cm - Etac",
+    "competitor_name": "Healthy Living Hub",
+    "competitor_url": "https://healthylivinghub.com.au/product/etac-reacher-grabber-45cm/",
+    "competitor_sku": "80505004",
+    "competitor_variant_hint": "Exact 45 cm Etac Aktiv Reacher target 80505004."
+  },
+  {
+    "mapping_id": 363,
+    "sku": "80210070",
+    "product_name": "Long Handled Hair Comb (Long) - Etac",
+    "competitor_name": "Direct Mobility",
+    "competitor_url": "https://directmobility.com.au/products/etac-beauty-comb-long",
+    "competitor_sku": "80210070",
+    "competitor_variant_hint": "Exact Etac Beauty Comb Long 370 mm / target item 80210070."
+  },
+  {
+    "mapping_id": 364,
+    "sku": "80210078",
+    "product_name": "Beauty Hair Washer - Etac",
+    "competitor_name": "Australian Assistive Technology Centre",
+    "competitor_url": "https://www.australianatc.com.au/products/etac-beauty-hair-washer-behi",
+    "competitor_sku": "80210078",
+    "competitor_variant_hint": "Exact Etac Beauty Hair Washer, 360 mm, SKU 80210078."
+  },
+  {
+    "mapping_id": 365,
+    "sku": "80210076",
+    "product_name": "Beauty Body Washer - Etac",
+    "competitor_name": "Australian Assistive Technology Centre",
+    "competitor_url": "https://www.australianatc.com.au/products/etac-beauty-body-washer",
+    "competitor_sku": "80210076",
+    "competitor_variant_hint": "Exact Etac Beauty Body Washer, 380 mm, SKU 80210076."
+  },
+  {
+    "mapping_id": 366,
+    "sku": "80210074",
+    "product_name": "Beauty Hairbrush - Long - Etac",
+    "competitor_name": "Australian Assistive Technology Centre",
+    "competitor_url": "https://www.australianatc.com.au/products/etac-beauty-hairbrush-behi",
+    "competitor_sku": "80210074",
+    "competitor_variant_hint": "LOCK VARIANT: Long 370 mm / 80210074 only. Do not use Short 290 mm."
+  },
+  {
+    "mapping_id": 367,
+    "sku": "80210072",
+    "product_name": "Beauty Hairbrush - Standard - Etac",
+    "competitor_name": "Australian Assistive Technology Centre",
+    "competitor_url": "https://www.australianatc.com.au/products/etac-beauty-hairbrush-behi",
+    "competitor_sku": "80210072",
+    "competitor_variant_hint": "LOCK VARIANT: Short/Standard 290 mm / 80210072 only. Do not use Long 370 mm."
+  },
+  {
+    "mapping_id": 368,
+    "sku": "80210080",
+    "product_name": "Beauty Back Washer - Etac",
+    "competitor_name": "Arthritis Solutions",
+    "competitor_url": "https://www.arthritissolutions.com.au/Beauty-Back-Washer-Product-Code-ETAC-80210080.html",
+    "competitor_sku": "80210080",
+    "competitor_variant_hint": "Exact Etac Beauty Back Washer, 770 mm, SKU 80210080."
+  },
+  {
+    "mapping_id": 369,
+    "sku": "80210078",
+    "product_name": "Beauty Hair Washer - Etac",
+    "competitor_name": "Arthritis Solutions",
+    "competitor_url": "https://www.arthritissolutions.com.au/Beauty-Hair-Washer-Product-Code-ETAC-80210078.html",
+    "competitor_sku": "80210078",
+    "competitor_variant_hint": "Exact Etac Beauty Hair Washer, 360 mm, SKU 80210078."
+  },
+  {
+    "mapping_id": 370,
+    "sku": "80210076",
+    "product_name": "Beauty Body Washer - Etac",
+    "competitor_name": "Arthritis Solutions",
+    "competitor_url": "https://www.arthritissolutions.com.au/Beauty-Body-washer-Product-Code-ETAC-80210076.html",
+    "competitor_sku": "80210076",
+    "competitor_variant_hint": "Exact Etac Beauty Body Washer, 380 mm, SKU 80210076."
+  },
+  {
+    "mapping_id": 371,
+    "sku": "80210074",
+    "product_name": "Beauty Hairbrush - Long - Etac",
+    "competitor_name": "Arthritis Solutions",
+    "competitor_url": "https://www.arthritissolutions.com.au/Beauty-Hairbrush-long-Product-Code-ETAC-80210074.html",
+    "competitor_sku": "80210074",
+    "competitor_variant_hint": "Exact Etac Beauty Hairbrush Long, 370 mm, SKU 80210074."
+  },
+  {
+    "mapping_id": 372,
+    "sku": "80210072",
+    "product_name": "Beauty Hairbrush - Standard - Etac",
+    "competitor_name": "Arthritis Solutions",
+    "competitor_url": "https://www.arthritissolutions.com.au/Beauty-Hairbrush-Short-Product-Code-ETAC-80210072.html",
+    "competitor_sku": "80210072",
+    "competitor_variant_hint": "Exact Etac Beauty Hairbrush Standard/Short, 290 mm, SKU 80210072. Do not use Long 80210074."
+  },
+  {
+    "mapping_id": 373,
+    "sku": "80210080",
+    "product_name": "Beauty Back Washer - Etac",
+    "competitor_name": "Mobility Aids For You",
+    "competitor_url": "https://mobilityaidsforyou.com.au/products/etac-beauty-back-washer",
+    "competitor_sku": "80210080",
+    "competitor_variant_hint": "Exact Etac Beauty Back Washer, 770 mm, SKU 80210080."
+  },
+  {
+    "mapping_id": 374,
+    "sku": "80210076",
+    "product_name": "Beauty Body Washer - Etac",
+    "competitor_name": "Mobility Aids For You",
+    "competitor_url": "https://mobilityaidsforyou.com.au/products/etac-beauty-body-washer",
+    "competitor_sku": "80210076",
+    "competitor_variant_hint": "Exact Etac Beauty Body Washer, 380 mm, SKU 80210076."
+  },
+  {
+    "mapping_id": 375,
+    "sku": "80210074",
+    "product_name": "Beauty Hairbrush - Long - Etac",
+    "competitor_name": "Mobility Aids For You",
+    "competitor_url": "https://mobilityaidsforyou.com.au/products/etac-beauty-hairbrush",
+    "competitor_sku": "80210074",
+    "competitor_variant_hint": "LOCK VARIANT: Long 370 mm / 80210074 only. Do not use Short 80210072."
+  },
+  {
+    "mapping_id": 376,
+    "sku": "80210072",
+    "product_name": "Beauty Hairbrush - Standard - Etac",
+    "competitor_name": "Mobility Aids For You",
+    "competitor_url": "https://mobilityaidsforyou.com.au/products/etac-beauty-hairbrush",
+    "competitor_sku": "80210072",
+    "competitor_variant_hint": "LOCK VARIANT: Short/Standard 290 mm / 80210072 only. Do not use Long 80210074."
+  },
+  {
+    "mapping_id": 377,
+    "sku": "80210078",
+    "product_name": "Beauty Hair Washer - Etac",
+    "competitor_name": "Solutions Medical",
+    "competitor_url": "https://www.solutionsmedical.net.au/index.php?product_id=5193&route=product%2Fproduct",
+    "competitor_sku": "SM80210078N",
+    "competitor_variant_hint": "Exact Etac Beauty Hair Washer, supplier item 80210078, 360 mm."
+  },
+  {
+    "mapping_id": 378,
+    "sku": "80210074",
+    "product_name": "Beauty Hairbrush - Long - Etac",
+    "competitor_name": "Solutions Medical",
+    "competitor_url": "https://www.solutionsmedical.net.au/index.php?product_id=5194&route=product%2Fproduct",
+    "competitor_sku": "80210074",
+    "competitor_variant_hint": "LOCK VARIANT: Long 370 mm / Etac 80210074 only."
+  },
+  {
+    "mapping_id": 379,
+    "sku": "80210072",
+    "product_name": "Beauty Hairbrush - Standard - Etac",
+    "competitor_name": "Solutions Medical",
+    "competitor_url": "https://www.solutionsmedical.net.au/index.php?product_id=5194&route=product%2Fproduct",
+    "competitor_sku": "SM80210072N",
+    "competitor_variant_hint": "LOCK VARIANT: Short/Standard 290 mm / Etac 80210072 only."
+  },
+  {
+    "mapping_id": 380,
+    "sku": "80210080",
+    "product_name": "Beauty Back Washer - Etac",
+    "competitor_name": "Direct Mobility",
+    "competitor_url": "https://directmobility.com.au/products/etac-beauty-back-washer-1",
+    "competitor_sku": "80210080",
+    "competitor_variant_hint": "Exact Etac Beauty Back Washer, 770 mm, SKU 80210080."
+  },
+  {
+    "mapping_id": 381,
+    "sku": "80210076",
+    "product_name": "Beauty Body Washer - Etac",
+    "competitor_name": "Direct Mobility",
+    "competitor_url": "https://directmobility.com.au/products/etac-beauty-body-washer-1",
+    "competitor_sku": "80210076",
+    "competitor_variant_hint": "Exact Etac Beauty Body Washer, 380 mm, SKU 80210076."
+  },
+  {
+    "mapping_id": 382,
+    "sku": "80210074",
+    "product_name": "Beauty Hairbrush - Long - Etac",
+    "competitor_name": "Direct Mobility",
+    "competitor_url": "https://directmobility.com.au/products/etac-beauty-hairbrush-1",
+    "competitor_sku": "80210074",
+    "competitor_variant_hint": "LOCK VARIANT: Long 37 cm / 80210074 only. Do not use Standard 29 cm."
+  },
+  {
+    "mapping_id": 383,
+    "sku": "80210072",
+    "product_name": "Beauty Hairbrush - Standard - Etac",
+    "competitor_name": "Direct Mobility",
+    "competitor_url": "https://directmobility.com.au/products/etac-beauty-hairbrush-1",
+    "competitor_sku": "80210072",
+    "competitor_variant_hint": "LOCK VARIANT: Standard 29 cm / 80210072 only. Do not use Long 37 cm."
+  },
+  {
+    "mapping_id": 384,
+    "sku": "80210078",
+    "product_name": "Beauty Hair Washer - Etac",
+    "competitor_name": "Karis Life",
+    "competitor_url": "https://karislife.com.au/shop/product/etac-beauty-hair-washer",
+    "competitor_sku": "80210078",
+    "competitor_variant_hint": "Exact Etac Beauty Hair Washer target 80210078, 360 mm."
+  },
+  {
+    "mapping_id": 385,
+    "sku": "BL1104",
+    "product_name": "Aluminium Shower Chair - BetterLiving",
+    "competitor_name": "Australian Assistive Technology Centre",
+    "competitor_url": "https://www.australianatc.com.au/products/betterliving-aluminium-shower-chair-behi",
+    "competitor_sku": "BL1104",
+    "competitor_variant_hint": "Exact BetterLiving Aluminium Shower Chair, target SKU BL1104."
+  },
+  {
+    "mapping_id": 386,
+    "sku": "BL1165",
+    "product_name": "Toilet Surround - BetterLiving",
+    "competitor_name": "Australian Assistive Technology Centre",
+    "competitor_url": "https://www.australianatc.com.au/products/betterliving-toilet-surround-behi",
+    "competitor_sku": "BL1165",
+    "competitor_variant_hint": "Exact BetterLiving Toilet Surround, target SKU BL1165, 190 kg capacity."
+  },
+  {
+    "mapping_id": 387,
+    "sku": "80304001",
+    "product_name": "Torkel Toilet Paper Tongs - Etac",
+    "competitor_name": "Australian Assistive Technology Centre",
+    "competitor_url": "https://www.australianatc.com.au/products/etac-torkel-toilet-paper-tongs",
+    "competitor_sku": "80304001",
+    "competitor_variant_hint": "Exact Etac Torkel Toilet Paper Tongs, 330 mm, target SKU 80304001."
+  },
+  {
+    "mapping_id": 388,
+    "sku": "80304001",
+    "product_name": "Torkel Toilet Paper Tongs - Etac",
+    "competitor_name": "Arthritis Solutions",
+    "competitor_url": "https://www.arthritissolutions.com.au/Toilet-Paper-Tongs-Torkel-Product-Code-ETAC-80304001.html",
+    "competitor_sku": "80304001",
+    "competitor_variant_hint": "Exact Etac Torkel Toilet Paper Tongs, 330 mm, SKU 80304001."
+  },
+  {
+    "mapping_id": 389,
+    "sku": "80210104",
+    "product_name": "Replacement Wash Cloth for Back Washer - Etac",
+    "competitor_name": "Arthritis Solutions",
+    "competitor_url": "https://www.arthritissolutions.com.au/Beauty-Back-Washer-Spare-Cloth-Product-Code-ETAC-80210104.html",
+    "competitor_sku": "80210104",
+    "competitor_variant_hint": "Exact Etac Beauty Back Washer replacement cloth, 2 pack, SKU 80210104. Do not confuse with Body Washer cloth 80210103."
+  },
+  {
+    "mapping_id": 390,
+    "sku": "80210103",
+    "product_name": "Replacement Wash Cloth for Body Washer - Etac",
+    "competitor_name": "Arthritis Solutions",
+    "competitor_url": "https://www.arthritissolutions.com.au/Beauty-Body-Washer-Spare-Cloth-Product-Code-ETAC-80210103.html",
+    "competitor_sku": "80210103",
+    "competitor_variant_hint": "Exact Etac Beauty Body Washer replacement cloth, 2 pack, SKU 80210103. Do not confuse with Back Washer cloth 80210104."
+  },
+  {
+    "mapping_id": 391,
+    "sku": "80304001",
+    "product_name": "Torkel Toilet Paper Tongs - Etac",
+    "competitor_name": "Surgical House",
+    "competitor_url": "https://surgicalhouse.com.au/Product.php?id=80304001",
+    "competitor_sku": "80304001",
+    "competitor_variant_hint": "Exact Etac Torkel Toilet Paper Tongs, SKU 80304001."
+  },
+  {
+    "mapping_id": 392,
+    "sku": "80210104",
+    "product_name": "Replacement Wash Cloth for Back Washer - Etac",
+    "competitor_name": "Daily Living Products",
+    "competitor_url": "https://daily.com.au/products/etac-back-washer-replacement-cloth",
+    "competitor_sku": "80210104",
+    "competitor_variant_hint": "Exact replacement cloth for Etac Beauty Back Washer, 2 cloths, target SKU 80210104."
+  },
+  {
+    "mapping_id": 393,
+    "sku": "80210103",
+    "product_name": "Replacement Wash Cloth for Body Washer - Etac",
+    "competitor_name": "Daily Living Products",
+    "competitor_url": "https://daily.com.au/products/etac-body-washer-replacement-cloth",
+    "competitor_sku": "80210103",
+    "competitor_variant_hint": "Exact replacement cloth for Etac Beauty Body Washer, 2 cloths, target SKU 80210103."
+  },
+  {
+    "mapping_id": 394,
+    "sku": "BL1104",
+    "product_name": "Aluminium Shower Chair - BetterLiving",
+    "competitor_name": "Mobility Aids For You",
+    "competitor_url": "https://mobilityaidsforyou.com.au/products/betterliving-aluminium-shower-chair",
+    "competitor_sku": "BL1104",
+    "competitor_variant_hint": "Exact BetterLiving Aluminium Shower Chair, target SKU BL1104."
+  },
+  {
+    "mapping_id": 395,
+    "sku": "BL1165",
+    "product_name": "Toilet Surround - BetterLiving",
+    "competitor_name": "Mobility Aids For You",
+    "competitor_url": "https://mobilityaidsforyou.com.au/products/betterliving-toilet-surround",
+    "competitor_sku": "BL1165",
+    "competitor_variant_hint": "Exact BetterLiving Toilet Surround, target SKU BL1165, 190 kg capacity."
+  },
+  {
+    "mapping_id": 396,
+    "sku": "80304001",
+    "product_name": "Torkel Toilet Paper Tongs - Etac",
+    "competitor_name": "Mobility Aids For You",
+    "competitor_url": "https://mobilityaidsforyou.com.au/products/etac-torkel-toilet-paper-tongs",
+    "competitor_sku": "80304001",
+    "competitor_variant_hint": "Exact Etac Torkel Toilet Paper Tongs, 330 mm, target SKU 80304001."
+  },
+  {
+    "mapping_id": 397,
+    "sku": "80210104",
+    "product_name": "Replacement Wash Cloth for Back Washer - Etac",
+    "competitor_name": "Mobility Aids For You",
+    "competitor_url": "https://mobilityaidsforyou.com.au/products/etac-beauty-back-washer-replacement-cloth-2-pack",
+    "competitor_sku": "80210104",
+    "competitor_variant_hint": "Exact Etac Beauty Back Washer replacement cloth, 2 pack, target SKU 80210104."
+  },
+  {
+    "mapping_id": 398,
+    "sku": "80210103",
+    "product_name": "Replacement Wash Cloth for Body Washer - Etac",
+    "competitor_name": "Mobility Aids For You",
+    "competitor_url": "https://mobilityaidsforyou.com.au/products/etac-beauty-body-washer-replacement-cloth-2-pack",
+    "competitor_sku": "80210103",
+    "competitor_variant_hint": "Exact Etac Beauty Body Washer replacement cloth, 2 pack, target SKU 80210103."
+  },
+  {
+    "mapping_id": 401,
+    "sku": "BL1165",
+    "product_name": "Toilet Surround - BetterLiving",
+    "competitor_name": "Solutions Medical",
+    "competitor_url": "https://www.solutionsmedical.net.au/index.php?product_id=5115&route=product%2Fproduct",
+    "competitor_sku": "BL1165",
+    "competitor_variant_hint": "Exact BetterLiving Toilet Surround, Product Code BL1165."
+  },
+  {
+    "mapping_id": 402,
+    "sku": "80210104",
+    "product_name": "Replacement Wash Cloth for Back Washer - Etac",
+    "competitor_name": "Solutions Medical",
+    "competitor_url": "https://www.solutionsmedical.net.au/index.php?product_id=5189&route=product%2Fproduct",
+    "competitor_sku": "SM80210104N",
+    "competitor_variant_hint": "Exact Etac Beauty Back Washer replacement cloth, 2 pack; Product Code 80210104 / SKU SM80210104N."
+  },
+  {
+    "mapping_id": 403,
+    "sku": "BL1165",
+    "product_name": "Toilet Surround - BetterLiving",
+    "competitor_name": "Karis Life",
+    "competitor_url": "https://karislife.com.au/shop/product/toilet-surround",
+    "competitor_sku": "BL1165",
+    "competitor_variant_hint": "Exact BetterLiving Toilet Surround family/product matching BL1165 specifications."
+  },
+  {
+    "mapping_id": 418,
+    "sku": "80501004",
+    "product_name": "Food Preparation Board - Etac",
+    "competitor_name": "Patient Handling",
+    "competitor_url": "https://www.patienthandling.com.au/product/etac-fix-food-preparation-board/",
+    "competitor_sku": "80501004",
+    "competitor_variant_hint": "Exact Etac Fix Food Preparation Board"
+  },
+  {
+    "mapping_id": 419,
+    "sku": "BL1234",
+    "product_name": "Walking Frame with Wheels and Skis - BetterLiving",
+    "competitor_name": "Patient Handling",
+    "competitor_url": "https://www.patienthandling.com.au/product/betterlivingwalking-frame/",
+    "competitor_sku": "BL1234",
+    "competitor_variant_hint": "Exact BetterLiving frame with front wheels and rear skis"
+  },
+  {
+    "mapping_id": 420,
+    "sku": "BL1234",
+    "product_name": "Walking Frame with Wheels and Skis - BetterLiving",
+    "competitor_name": "Australian Assistive Technology Centre",
+    "competitor_url": "https://www.australianatc.com.au/products/betterliving-walking-frame-with-wheels-and-skis",
+    "competitor_sku": "BL1234",
+    "competitor_variant_hint": "Exact BetterLiving frame with front wheels and rear skis"
+  },
+  {
+    "mapping_id": 421,
+    "sku": "81706110",
+    "product_name": "Extension Flexible Grab Rails- Etac White - 30 cm",
+    "competitor_name": "Australian Assistive Technology Centre",
+    "competitor_url": "https://www.australianatc.com.au/products/etac-flex-grab-rails",
+    "competitor_sku": "81706110",
+    "competitor_variant_hint": "White 30 cm extension; screw-mounted"
+  },
+  {
+    "mapping_id": 422,
+    "sku": "81707120",
+    "product_name": "Flexible Grab Rails - Etac White - 60 cm",
+    "competitor_name": "Australian Assistive Technology Centre",
+    "competitor_url": "https://www.australianatc.com.au/products/etac-flex-grab-rails",
+    "competitor_sku": "81707120",
+    "competitor_variant_hint": "White 60 cm screw-mounted variant"
+  },
+  {
+    "mapping_id": 423,
+    "sku": "81707110",
+    "product_name": "Flexible Grab Rails - Etac White - 30 cm",
+    "competitor_name": "Australian Assistive Technology Centre",
+    "competitor_url": "https://www.australianatc.com.au/products/etac-flex-grab-rails",
+    "competitor_sku": "81707110",
+    "competitor_variant_hint": "White 30 cm screw-mounted variant"
+  },
+  {
+    "mapping_id": 424,
+    "sku": "80501005",
+    "product_name": "Cut Cutting Aid - Etac",
+    "competitor_name": "Arthritis Solutions",
+    "competitor_url": "https://www.arthritissolutions.com.au/ETAC-Cut-cutting-aid.-Product-Code-ETAC-80501005.html",
+    "competitor_sku": "80501005",
+    "competitor_variant_hint": "Exact Etac Cut Cutting Aid"
+  },
+  {
+    "mapping_id": 425,
+    "sku": "80501004",
+    "product_name": "Food Preparation Board - Etac",
+    "competitor_name": "Arthritis Solutions",
+    "competitor_url": "https://www.arthritissolutions.com.au/ETAC-Food-Preparation-Board-Fix-and-Cut.-Product-Code-ETAC-80501004.html",
+    "competitor_sku": "80501004",
+    "competitor_variant_hint": "Exact Etac Fix Food Preparation Board"
+  },
+  {
+    "mapping_id": 426,
+    "sku": "80501005",
+    "product_name": "Cut Cutting Aid - Etac",
+    "competitor_name": "Mobility Aids For You",
+    "competitor_url": "https://mobilityaidsforyou.com.au/products/etac-cut-cutting-board",
+    "competitor_sku": "80501005",
+    "competitor_variant_hint": "Exact Etac Cut Cutting Aid"
+  },
+  {
+    "mapping_id": 427,
+    "sku": "80501004",
+    "product_name": "Food Preparation Board - Etac",
+    "competitor_name": "Mobility Aids For You",
+    "competitor_url": "https://mobilityaidsforyou.com.au/products/etac-fix-food-preparation-board",
+    "competitor_sku": "80501004",
+    "competitor_variant_hint": "Exact Etac Fix Food Preparation Board"
+  },
+  {
+    "mapping_id": 428,
+    "sku": "BL1234",
+    "product_name": "Walking Frame with Wheels and Skis - BetterLiving",
+    "competitor_name": "Mobility Aids For You",
+    "competitor_url": "https://mobilityaidsforyou.com.au/products/betterliving-walking-frame-with-wheels-and-skis",
+    "competitor_sku": "BL1234",
+    "competitor_variant_hint": "Exact BetterLiving frame with front wheels and rear skis"
+  },
+  {
+    "mapping_id": 429,
+    "sku": "81706110",
+    "product_name": "Extension Flexible Grab Rails- Etac White - 30 cm",
+    "competitor_name": "Mobility Aids For You",
+    "competitor_url": "https://mobilityaidsforyou.com.au/products/etac-flex-grab-rails-1",
+    "competitor_sku": null,
+    "competitor_variant_hint": "White 30 cm extension; screw-mounted; NOVIS P41 SKU 81706110"
+  },
+  {
+    "mapping_id": 430,
+    "sku": "81707120",
+    "product_name": "Flexible Grab Rails - Etac White - 60 cm",
+    "competitor_name": "Mobility Aids For You",
+    "competitor_url": "https://mobilityaidsforyou.com.au/products/etac-flex-grab-rails-1",
+    "competitor_sku": null,
+    "competitor_variant_hint": "White 60 cm screw-mounted variant; NOVIS P40 SKU 81707120"
+  },
+  {
+    "mapping_id": 431,
+    "sku": "81707110",
+    "product_name": "Flexible Grab Rails - Etac White - 30 cm",
+    "competitor_name": "Mobility Aids For You",
+    "competitor_url": "https://mobilityaidsforyou.com.au/products/etac-flex-grab-rails-1",
+    "competitor_sku": null,
+    "competitor_variant_hint": "White 30 cm screw-mounted variant; NOVIS P39 SKU 81707110"
+  },
+  {
+    "mapping_id": 435,
+    "sku": "80501004",
+    "product_name": "Food Preparation Board - Etac",
+    "competitor_name": "Solutions Medical",
+    "competitor_url": "https://www.solutionsmedical.net.au/index.php?product_id=5551&route=product%2Fproduct",
+    "competitor_sku": "80501004",
+    "competitor_variant_hint": "Exact Etac Fix Food Preparation Board"
+  },
+  {
+    "mapping_id": 436,
+    "sku": "80501004",
+    "product_name": "Food Preparation Board - Etac",
+    "competitor_name": "Direct Mobility",
+    "competitor_url": "https://directmobility.com.au/products/etac-fix-food-preparation-board",
+    "competitor_sku": "80501004",
+    "competitor_variant_hint": "Exact Etac Fix Food Preparation Board"
+  },
+  {
+    "mapping_id": 437,
+    "sku": "81706110",
+    "product_name": "Extension Flexible Grab Rails- Etac White - 30 cm",
+    "competitor_name": "The Independence Shop",
+    "competitor_url": "https://theindependenceshop.com.au/products/etac-bathroom-grab-rail-screw-mounted",
+    "competitor_sku": null,
+    "competitor_variant_hint": "White 30 cm grab rail extension; screw-mounted; NOVIS P41 SKU 81706110"
+  },
+  {
+    "mapping_id": 438,
+    "sku": "81707120",
+    "product_name": "Flexible Grab Rails - Etac White - 60 cm",
+    "competitor_name": "The Independence Shop",
+    "competitor_url": "https://theindependenceshop.com.au/products/etac-bathroom-grab-rail-screw-mounted",
+    "competitor_sku": null,
+    "competitor_variant_hint": "White 60 cm screw-mounted set; NOVIS P40 SKU 81707120"
+  },
+  {
+    "mapping_id": 439,
+    "sku": "81707110",
+    "product_name": "Flexible Grab Rails - Etac White - 30 cm",
+    "competitor_name": "The Independence Shop",
+    "competitor_url": "https://theindependenceshop.com.au/products/etac-bathroom-grab-rail-screw-mounted",
+    "competitor_sku": null,
+    "competitor_variant_hint": "White 30 cm screw-mounted variant; NOVIS P39 SKU 81707110"
+  },
+  {
+    "mapping_id": 440,
+    "sku": "81707110",
+    "product_name": "Flexible Grab Rails - Etac White - 30 cm",
+    "competitor_name": "Max Healthcare Equipment",
+    "competitor_url": "https://www.maxhealthcareequipment.com.au/product/etac-flex-grab-rails-screw-mounted/",
+    "competitor_sku": null,
+    "competitor_variant_hint": "White 30 cm screw-mounted variant; NOVIS P39 SKU 81707110"
+  },
+  {
+    "mapping_id": 441,
+    "sku": "BL1234",
+    "product_name": "Walking Frame with Wheels and Skis - BetterLiving",
+    "competitor_name": "Wheelchair Australia",
+    "competitor_url": "https://wheelchairaustralia.com.au/products/walkers-betterliving-walking-frame-wheels-and-skis",
+    "competitor_sku": "BL1234",
+    "competitor_variant_hint": "Exact BetterLiving frame with front wheels and rear skis"
+  },
+  {
+    "mapping_id": 442,
+    "sku": "80501005",
+    "product_name": "Cut Cutting Aid - Etac",
+    "competitor_name": "Aged Care and Medical",
+    "competitor_url": "https://agedcareandmedical.com.au/products/etac-cut-cutting-aid",
+    "competitor_sku": "80501005",
+    "competitor_variant_hint": "Exact Etac Cut Cutting Aid"
+  },
+  {
+    "mapping_id": 443,
+    "sku": "80501005",
+    "product_name": "Cut Cutting Aid - Etac",
+    "competitor_name": "Independent Living Care & Mobility Centre",
+    "competitor_url": "https://www.ilcmc.com.au/etac-cut-cutting-board",
+    "competitor_sku": "80501005",
+    "competitor_variant_hint": "Exact Etac Cut Cutting Aid"
+  },
+  {
+    "mapping_id": 444,
+    "sku": "80501004",
+    "product_name": "Food Preparation Board - Etac",
+    "competitor_name": "Independent Living Care & Mobility Centre",
+    "competitor_url": "https://www.ilcmc.com.au/etac-fix-preparation-board",
+    "competitor_sku": "80501004",
+    "competitor_variant_hint": "Exact Etac Fix Food Preparation Board"
+  },
+  {
+    "mapping_id": 455,
+    "sku": "9488",
+    "product_name": "Non - Slip Cup with Flower - Ornamin-Red/White",
+    "competitor_name": "Mobility Aids For You",
+    "competitor_url": "https://mobilityaidsforyou.com.au/products/ornamin-non-slip-cup-flower-design",
+    "competitor_sku": null,
+    "competitor_variant_hint": "Red/White flower variant; NOVIS P45 SKU 9488"
+  },
+  {
+    "mapping_id": 462,
+    "sku": "9488",
+    "product_name": "Non - Slip Cup with Flower - Ornamin-Red/White",
+    "competitor_name": "Aesthetics Healthcare",
+    "competitor_url": "https://www.ahealthcare.com.au/products/ornamin-non-slip-cup-flower-design",
+    "competitor_sku": null,
+    "competitor_variant_hint": "Red/White flower variant; NOVIS P45 SKU 9488"
+  },
+  {
+    "mapping_id": 463,
+    "sku": "BL0036SHBA",
+    "product_name": "Orientation Signage for Dementia - Bathroom",
+    "competitor_name": "Mobility Zone",
+    "competitor_url": "https://mobilityzone.com.au/product/orientation-signage-better-living/",
+    "competitor_sku": null,
+    "competitor_variant_hint": "Bathroom sticker, green; NOVIS P52 SKU BL0036SHBA"
+  },
+  {
+    "mapping_id": 464,
+    "sku": "BL0036K",
+    "product_name": "Orientation Sign for Dementia - Kitchen",
+    "competitor_name": "Mobility Zone",
+    "competitor_url": "https://mobilityzone.com.au/product/orientation-signage-better-living/",
+    "competitor_sku": null,
+    "competitor_variant_hint": "Kitchen sticker, red; NOVIS P51 SKU BL0036K"
+  },
+  {
+    "mapping_id": 465,
+    "sku": "BL0036BE",
+    "product_name": "Orientation Sign for Dementia - Bedroom",
+    "competitor_name": "Mobility Zone",
+    "competitor_url": "https://mobilityzone.com.au/product/orientation-signage-better-living/",
+    "competitor_sku": null,
+    "competitor_variant_hint": "Bedroom sticker, blue; NOVIS P50 SKU BL0036BE"
+  },
+  {
+    "mapping_id": 466,
+    "sku": "804040",
+    "product_name": "Tasty Beaker Sippy Cup - Etac",
+    "competitor_name": "Patient Handling",
+    "competitor_url": "https://www.patienthandling.com.au/product/etac-tasty-beaker/",
+    "competitor_sku": null,
+    "competitor_variant_hint": "Complete beaker option with holder and spout lid"
+  },
+  {
+    "mapping_id": 469,
+    "sku": "804040",
+    "product_name": "Tasty Beaker Sippy Cup - Etac",
+    "competitor_name": "Australian Assistive Technology Centre",
+    "competitor_url": "https://www.australianatc.com.au/products/etac-tasty-beaker-cc",
+    "competitor_sku": "804040",
+    "competitor_variant_hint": "Complete Beaker; supplier base SKU 804040"
+  },
+  {
+    "mapping_id": 473,
+    "sku": "804040",
+    "product_name": "Tasty Beaker Sippy Cup - Etac",
+    "competitor_name": "Arthritis Solutions",
+    "competitor_url": "https://www.arthritissolutions.com.au/ETAC-Tasty-beaker.-Product-Code-ETAC-80404042.html",
+    "competitor_sku": "80404042",
+    "competitor_variant_hint": "Complete Tasty Beaker matching supplier base SKU 804040"
+  },
+  {
+    "mapping_id": 474,
+    "sku": "10863",
+    "product_name": "Thermo Plate - Ornamin",
+    "competitor_name": "Arthritis Solutions",
+    "competitor_url": "https://www.arthritissolutions.com.au/Ornamin-Thermo-Plate-255-mm.-Product-Code-10863.html",
+    "competitor_sku": "10863",
+    "competitor_variant_hint": "Red/white 255 mm Thermo Plate"
+  },
+  {
+    "mapping_id": 476,
+    "sku": "804040",
+    "product_name": "Tasty Beaker Sippy Cup - Etac",
+    "competitor_name": "Mobility Aids For You",
+    "competitor_url": "https://mobilityaidsforyou.com.au/products/etac-tasty-beaker",
+    "competitor_sku": null,
+    "competitor_variant_hint": "Complete beaker with holder and spout lid"
+  },
+  {
+    "mapping_id": 482,
+    "sku": "KC26",
+    "product_name": "One Touch Can Opener",
+    "competitor_name": "Karis Life",
+    "competitor_url": "https://karislife.com.au/shop/product/one-touch-automatic-electric-can-opener",
+    "competitor_sku": null,
+    "competitor_variant_hint": "Exact One Touch can opener; matches KC26 specification"
+  },
+  {
+    "mapping_id": 483,
+    "sku": "804040",
+    "product_name": "Tasty Beaker Sippy Cup - Etac",
+    "competitor_name": "Aged Care and Medical",
+    "competitor_url": "https://agedcareandmedical.com.au/products/etac-tasty-beaker",
+    "competitor_sku": null,
+    "competitor_variant_hint": "Complete beaker with holder and spout lid"
+  },
+  {
+    "mapping_id": 487,
+    "sku": "BL0036T",
+    "product_name": "Orientation Signage  for Dementia - Toilet",
+    "competitor_name": "Mobility Zone",
+    "competitor_url": "https://mobilityzone.com.au/product/orientation-signage-better-living/",
+    "competitor_sku": null,
+    "competitor_variant_hint": "Toilet sticker, yellow; NOVIS P53 SKU BL0036T"
+  },
+  {
+    "mapping_id": 488,
+    "sku": "KC85",
+    "product_name": "One Touch Bottle Opener",
+    "competitor_name": "Feros Care",
+    "competitor_url": "https://shop.feroscare.com.au/product/one-touch-twizoff-automatic-bottle-opener",
+    "competitor_sku": "KC85",
+    "competitor_variant_hint": "Exact One Touch bottle opener"
+  },
+  {
+    "mapping_id": 489,
+    "sku": "KC12",
+    "product_name": "One Touch Jar Opener",
+    "competitor_name": "Feros Care",
+    "competitor_url": "https://shop.feroscare.com.au/product/one-touch-automatic-jar-opener",
+    "competitor_sku": "KC12",
+    "competitor_variant_hint": "Exact One Touch jar opener"
+  },
+  {
+    "mapping_id": 490,
+    "sku": "KC26",
+    "product_name": "One Touch Can Opener",
+    "competitor_name": "Feros Care",
+    "competitor_url": "https://shop.feroscare.com.au/product/one-touch-automatic-can-opener",
+    "competitor_sku": "KC26",
+    "competitor_variant_hint": "Exact One Touch can opener"
+  },
+  {
+    "mapping_id": 491,
+    "sku": "KC26",
+    "product_name": "One Touch Can Opener",
+    "competitor_name": "AC Mobility",
+    "competitor_url": "https://acmobility.company.site/One-Touch-Automatic-Can-Opener-p139984644",
+    "competitor_sku": "KC26",
+    "competitor_variant_hint": "Exact One Touch can opener"
+  },
+  {
+    "mapping_id": 495,
+    "sku": "KC85",
+    "product_name": "One Touch Bottle Opener",
+    "competitor_name": "Astley Mobility",
+    "competitor_url": "https://www.astleymobility.com.au/one-touch-twizoff-bottle-opener",
+    "competitor_sku": "KC85",
+    "competitor_variant_hint": "Exact One Touch bottle opener"
+  },
+  {
+    "mapping_id": 496,
+    "sku": "KC12",
+    "product_name": "One Touch Jar Opener",
+    "competitor_name": "Astley Mobility",
+    "competitor_url": "https://www.astleymobility.com.au/one-touch-jar-opener",
+    "competitor_sku": "KC12",
+    "competitor_variant_hint": "Exact One Touch jar opener"
+  },
+  {
+    "mapping_id": 497,
+    "sku": "KC26",
+    "product_name": "One Touch Can Opener",
+    "competitor_name": "Astley Mobility",
+    "competitor_url": "https://www.astleymobility.com.au/one-touch-automatic-can-opener",
+    "competitor_sku": "KC26",
+    "competitor_variant_hint": "Exact One Touch can opener"
+  },
+  {
+    "mapping_id": 500,
+    "sku": "KC26",
+    "product_name": "One Touch Can Opener",
+    "competitor_name": "GMobility",
+    "competitor_url": "https://www.gmobility.com.au/product/one-touch-can-opener-ii/",
+    "competitor_sku": "KC26",
+    "competitor_variant_hint": "Exact One Touch can opener"
+  },
+  {
+    "mapping_id": 501,
+    "sku": "KC12",
+    "product_name": "One Touch Jar Opener",
+    "competitor_name": "Rockingham Kwinana Mobility & Rehabilitation Supplies",
+    "competitor_url": "https://rkmrs.com.au/product/one-touch-automatic-jar-opener/",
+    "competitor_sku": "KC12",
+    "competitor_variant_hint": "Exact One Touch jar opener"
+  }
+]
