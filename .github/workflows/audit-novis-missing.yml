@@ -1,6 +1,11 @@
 name: Audit missing NOVIS prices
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "novis_missing_scrapling.py"
+      - ".github/workflows/audit-novis-missing.yml"
 permissions:
   contents: read
 jobs:
