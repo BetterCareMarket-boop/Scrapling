@@ -1,0 +1,21 @@
+name: Probe P57-P63 variant corrections with Scrapling
+on:
+  push:
+    branches: [fix-p57-p63-variant-skus]
+    paths:
+      - "probe_p57_p63_variants.py"
+      - ".github/workflows/probe-p57-p63-variants.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install "scrapling[fetchers]==0.5"
+      - run: python probe_p57_p63_variants.py
