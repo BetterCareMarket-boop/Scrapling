@@ -38,36 +38,7 @@ def run(t):
                     result.update(status='candidate_needs_variant_validation',candidate_price=fmt(dollars(v.get('price'))),validation_url=base+'?variant='+str(v.get('id')),reason='SKU did not match; price is candidate only')
                 else:result.update(status='variant_unresolved',reason=f'No exact match among {len(variants)} variants')
         else:
-            page=Fetcher.get(url,impersonate='chrome',stealthy_headers=True,timeout=35)
-            if int(getattr(page,'status',200))>=400:result.update(status='http_blocked',reason=f'HTTP {page.status}')
-            else:
-                docs=[]
-                for raw in page.css('script[type="application/ld+json"]::text').getall():
-                    try:
-                        stack=[json.loads(raw)]
-                        while stack:
-                            obj=stack.pop()
-                            if isinstance(obj,list):stack+=obj
-                            if isinstance(obj,dict):
-                                if obj.get('@type')=='Product':docs.append(obj)
-                                for key in ('@graph','mainEntity','hasVariant'):
-                                    if key in obj:stack.append(obj[key])
-                    except (ValueError,TypeError):pass
-                expected={str(t['sku']).strip().casefold(),str(t.get('competitor_sku') or '').strip().casefold()}
-                matches=[d for d in docs if d.get('sku') and str(d['sku']).strip().casefold() in expected]
-                if len(matches)==1:
-                    offers=matches[0].get('offers') or []
-                    if isinstance(offers,dict):offers=[offers]
-                    prices=[]
-                    for offer in offers:
-                        try:
-                            p=Decimal(str(offer.get('price')))
-                            if 0<p<100000:prices.append(p)
-                        except Exception:pass
-                    if len(set(prices))==1:
-                        result.update(status='verified_exact_sku',regular_price=fmt(prices[0]),method='scrapling_jsonld_exact_sku',reason='Exact SKU with one JSON-LD price')
-                    else:result.update(status='needs_retailer_extractor',reason='Ambiguous JSON-LD offer prices')
-                else:result.update(status='needs_retailer_extractor',reason='No scoped exact SKU JSON-LD price. No generic page price accepted.')
+            scrape_nonshopify(t,result)
     except Exception as e:result.update(status='fetch_failed',reason=f'{type(e).__name__}: {str(e)[:250]}')
     return result
 def scrape_nonshopify(t,out):
@@ -112,7 +83,7 @@ def scrape_nonshopify(t,out):
         if 0<v<100000:prices.append(v)
       except Exception:pass
     if len(set(prices))==1:
-      out.update(status='verified_exact_sku',regular_price=money(prices[0]),method='scrapling_jsonld_exact_sku',reason='Exact SKU JSON-LD offer')
+      out.update(status='verified_exact_sku',regular_price=fmt(prices[0]),method='scrapling_jsonld_exact_sku',reason='Exact SKU JSON-LD offer')
       return
   # Retailer-specific price regions: excludes navigation, related-product
   # carousel prices, cart subtotal, and footer offers.
@@ -144,7 +115,7 @@ def scrape_nonshopify(t,out):
       if candidates:break
     except Exception:continue
   if sku_scoped and len({v for _,v in candidates})==1:
-    out.update(status='candidate_scoped_price_requires_validation',candidate_price=money(candidates[0][1]),method='scrapling_retailer_scoped_price',reason='SKU identity and scoped price detected; manual confirmation required',price_selector=candidates[0][0])
+    out.update(status='candidate_scoped_price_requires_validation',candidate_price=fmt(candidates[0][1]),method='scrapling_retailer_scoped_price',reason='SKU identity and scoped price detected; manual confirmation required',price_selector=candidates[0][0])
   elif len({v for _,v in candidates})>1:
     out.update(status='ambiguous_product_prices',reason='Several different prices in scoped product elements; must verify regular/special relationship',price_selector=candidates[0][0])
   else:
@@ -153,7 +124,7 @@ def scrape_nonshopify(t,out):
 
 targets=json.loads(Path('novis_missing_targets.json').read_text())
 targets=[t for t in targets if int(t['mapping_id']) in IDS]
-assert len(targets)==62,len(targets)
+assert len(targets)==45,len(targets)
 results=[]
 for target in targets:
     r=run(target);results.append(r)
