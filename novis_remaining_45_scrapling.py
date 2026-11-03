@@ -1,5 +1,5 @@
 """Read-only Scrapling audit of 62 unmapped NOVIS prices."""
-import csv,json,re
+import csv,json,re,html
 from decimal import Decimal
 from pathlib import Path
 from urllib.parse import urlsplit,urlunsplit
@@ -41,6 +41,8 @@ def run(t):
             scrape_nonshopify(t,result)
     except Exception as e:result.update(status='fetch_failed',reason=f'{type(e).__name__}: {str(e)[:250]}')
     return result
+def node_text(nodes):
+  return ' '.join(html.unescape(re.sub(r'<[^>]+>',' ',part)) for part in nodes.getall())
 def scrape_nonshopify(t,out):
   url=t['competitor_url']
   mid=int(t['mapping_id'])
@@ -49,13 +51,13 @@ def scrape_nonshopify(t,out):
   if out['http_status'] and out['http_status']>=400:
     out.update(status='blocked_or_http_error',reason='HTTP '+str(out['http_status']))
     return
-  full=' '.join(page.css('body').get_all_text(separator=' ',strip=True).split())
-  title=' '.join(page.css('h1').get_all_text(separator=' ',strip=True).split())
+  full=' '.join(node_text(page.css('body')).split())
+  title=' '.join(node_text(page.css('h1')).split())
   expected=[str(t['sku']).strip(),str(t.get('competitor_sku') or '').strip()]
   # A SKU in the product title, URL, or explicit product-code element is stronger
   # than an incidental mention in a footer or recommendations widget.
   url_token=any(k and k.casefold() in url.casefold() for k in expected)
-  product_code=' '.join(page.css('.product-info, .product_meta, [itemprop="sku"], .sku, .product-code, .product-code-value').get_all_text(separator=' ',strip=True).split())
+  product_code=' '.join(node_text(page.css('.product-info, .product_meta, [itemprop="sku"], .sku, .product-code, .product-code-value')).split())
   sku_scoped=url_token or any(k and k.casefold() in (title+' '+product_code).casefold() for k in expected)
   if not sku_scoped and any(k and k.casefold() in full.casefold() for k in expected):
     out['reason']='SKU appears in body but not in a reliable product identity area'
@@ -108,7 +110,7 @@ def scrape_nonshopify(t,out):
     try:
       nodes=page.css(sel)
       if not nodes:continue
-      raw=' '.join(nodes.get_all_text(separator=' ',strip=True).split())
+      raw=' '.join(node_text(nodes).split())
       for hit in re.findall(r'(?<!\\d)\\$\\s*([0-9][0-9,]*(?:\\.[0-9]{1,2})?)',raw):
         v=Decimal(hit.replace(',',''))
         if 0<v<100000:candidates.append((sel,v))
