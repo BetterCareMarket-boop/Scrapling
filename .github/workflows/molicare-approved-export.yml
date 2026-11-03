@@ -1,0 +1,33 @@
+name: Export MoliCare Approved Prices Complete
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "molicare_export_from_saved_results.py"
+      - ".github/workflows/molicare-approved-export.yml"
+permissions:
+  contents: write
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install xlsxwriter==3.2.0
+      - name: Export full approved data
+        run: python molicare_export_from_saved_results.py
+      - name: Commit workbook
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add molicare_competitor_prices.xlsx
+          git diff --cached --quiet || git commit -m "Populate MoliCare competitor price spreadsheet"
+          git push
+      - uses: actions/upload-artifact@v4
+        with:
+          name: molicare_competitor_prices_complete
+          path: molicare_competitor_prices.xlsx
