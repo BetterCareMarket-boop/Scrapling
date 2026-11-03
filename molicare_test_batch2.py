@@ -32,16 +32,27 @@ def status(p):
 def price(v):
  return round(int(v)/100,2) if v is not None else None
 def normal_size(t):
- z=t.lower().replace("extra large","x-large").replace("xlarge","x-large").replace("xl","x-large")
+ z=t.lower().strip().replace("extra large","x-large").replace("xlarge","x-large")
+ if z=="xl":z="x-large"
  return z
 def size_ok(p,v):
- a=normal_size(str(v.get("option1") or "")+" "+str(v.get("title") or ""))
+ option=str(v.get("option1") or "").strip()
+ # If first option is not size (pack/carton), allow parent product's locked size.
+ if option and normal_size(option) in ("small","medium","large","x-large"):
+  return normal_size(option)==normal_size(p["size"])
+ title=normal_size(str(v.get("title") or ""))
  size=normal_size(p["size"])
- return bool(re.search(r"(?<![a-z])"+re.escape(size)+r"(?![a-z])",a))
-def qty_ok(p,v):
+ return bool(re.search(r"(?<![a-z])"+re.escape(size)+r"(?![a-z])",title))
+def qty_ok(p,v,parent_title=""):
  t=str(v.get("title") or "")+" "+str(v.get("option2") or "")
  count=p["count"]
- return bool(re.search(r"(?:carton|box|ctn|case)[^0-9]{0,18}"+str(count)+r"\b|\b"+str(count)+r"\s*(?:units|pieces|per carton|per box)",t,re.I))
+ if re.search(r"(?:carton|box|ctn|case)[^0-9]{0,18}"+str(count)+r"\b|\b"+str(count)+r"\s*(?:units|pieces|per carton|per box)",t,re.I):return True
+ m=re.search(r"(\d+)\s+packets?\s+of\s+(\d+)\s+units\s+per\s+carton",t,re.I)
+ if m and int(m.group(1))*int(m.group(2))==count:return True
+ # Single-option carton-only family product with explicitly carton-suffixed SKU.
+ sku=str(v.get("sku") or "")
+ if "carton" in parent_title.lower() and sku.upper().endswith("/C") and size_ok(p,v):return True
+ return False
 def sku_ok(p,v):
  sku=str(v.get("sku") or "")
  if not sku:return False
@@ -57,7 +68,7 @@ def run_shopify(p,src):
   return {"status":"wrong_product","title":title}
  options=[]
  for v in data.get("variants") or []:
-  if size_ok(p,v) and qty_ok(p,v):
+  if size_ok(p,v) and qty_ok(p,v,title):
    options.append(v)
  if len(options)!=1:
   return {"status":"variant_unresolved","count":len(options),"available_variants":[{"title":v.get("title"),"sku":v.get("sku")} for v in (data.get("variants") or [])][:15]}
