@@ -1,10 +1,10 @@
-name: Audit remaining 62 NOVIS prices
+name: Audit remaining 45 NOVIS retailer-specific prices
 on:
   workflow_dispatch:
   push:
     branches: [main]
     paths:
-      - "novis_remaining_62_scrapling.py"
+      - "novis_remaining_45_scrapling.py"
       - ".github/workflows/audit-novis-missing.yml"
 permissions:
   contents: read
@@ -18,11 +18,11 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install "scrapling[fetchers]==0.5"
-      - run: python novis_remaining_62_scrapling.py
+      - run: python novis_remaining_45_scrapling.py
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: novis-remaining-62-price-audit
+          name: novis-remaining-45-price-audit
           path: |
-            novis_remaining_62_results.json
-            novis_remaining_62_results.csv
+            novis_remaining_45_results.json
+            novis_remaining_45_results.csv
