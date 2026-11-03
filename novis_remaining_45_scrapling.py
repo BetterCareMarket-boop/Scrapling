@@ -70,19 +70,7 @@ def run(t):
                 else:result.update(status='needs_retailer_extractor',reason='No scoped exact SKU JSON-LD price. No generic page price accepted.')
     except Exception as e:result.update(status='fetch_failed',reason=f'{type(e).__name__}: {str(e)[:250]}')
     return result
-targets=json.loads(Path('novis_missing_targets.json').read_text())
-targets=[t for t in targets if int(t['mapping_id']) in IDS]
-assert len(targets)==62,len(targets)
-results=[]
-for target in targets:
-    r=run(target);results.append(r)
-    print(f"{r['mapping_id']}: {r['status']} {r['regular_price'] or r['candidate_price'] or ''}",flush=True)
-Path('novis_remaining_45_results.json').write_text(json.dumps(results,indent=2))
-with open('novis_remaining_45_results.csv','w',newline='') as file:
-    writer=csv.DictWriter(file,fieldnames=list(results[0]));writer.writeheader();writer.writerows(results)
-from collections import Counter
-print('SUMMARY',dict(Counter(r['status'] for r in results)))
-print('Read-only audit: do not import candidate/unresolved records')def scrape_nonshopify(t,out):
+def scrape_nonshopify(t,out):
   url=t['competitor_url']
   mid=int(t['mapping_id'])
   page=Fetcher.get(url,impersonate='chrome',stealthy_headers=True,timeout=35)
@@ -162,3 +150,16 @@ print('Read-only audit: do not import candidate/unresolved records')def scrape_n
   else:
     out.update(status='needs_retailer_extractor',reason=out.get('reason') or 'No exact-SKU scoped public price available')
 
+
+targets=json.loads(Path('novis_missing_targets.json').read_text())
+targets=[t for t in targets if int(t['mapping_id']) in IDS]
+assert len(targets)==62,len(targets)
+results=[]
+for target in targets:
+    r=run(target);results.append(r)
+    print(f"{r['mapping_id']}: {r['status']} {r['regular_price'] or r['candidate_price'] or ''}",flush=True)
+Path('novis_remaining_45_results.json').write_text(json.dumps(results,indent=2))
+with open('novis_remaining_45_results.csv','w',newline='') as file:
+    writer=csv.DictWriter(file,fieldnames=list(results[0]));writer.writeheader();writer.writerows(results)
+from collections import Counter
+print('SUMMARY',dict(Counter(r['status'] for r in results)))
