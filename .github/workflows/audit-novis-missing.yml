@@ -1,10 +1,10 @@
-name: Inspect Etac Tasty Beaker variants using Scrapling
+name: Test blocked NOVIS pages using Scrapling browser
 on:
   workflow_dispatch:
   push:
     branches: [main]
     paths:
-      - "novis_tasty_beaker_variants.py"
+      - "novis_blocked_stealth_probe.py"
       - ".github/workflows/audit-novis-missing.yml"
 permissions:
   contents: read
@@ -18,10 +18,11 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install "scrapling[fetchers]==0.5"
-      - run: python novis_tasty_beaker_variants.py
+      - run: scrapling install --force
+      - run: python novis_blocked_stealth_probe.py
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: novis-tasty-beaker-variants
+          name: novis-blocked-stealth-probe
           path: |
-            novis_tasty_beaker_variants.json
+            novis_blocked_stealth_probe.json
