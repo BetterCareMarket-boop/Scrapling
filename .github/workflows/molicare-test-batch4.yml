@@ -1,0 +1,21 @@
+name: MoliCare Scrapling Batch 4
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "molicare_test_batch4.py"
+      - ".github/workflows/molicare-test-batch4.yml"
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install "scrapling[fetchers]==0.5"
+      - run: python molicare_test_batch4.py
