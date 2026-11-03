@@ -1,10 +1,10 @@
-name: Diagnose NOVIS exact variants with Scrapling
+name: Inspect Etac Tasty Beaker variants using Scrapling
 on:
   workflow_dispatch:
   push:
     branches: [main]
     paths:
-      - "novis_final_variant_diagnostic.py"
+      - "novis_tasty_beaker_variants.py"
       - ".github/workflows/audit-novis-missing.yml"
 permissions:
   contents: read
@@ -18,10 +18,10 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install "scrapling[fetchers]==0.5"
-      - run: python novis_final_variant_diagnostic.py
+      - run: python novis_tasty_beaker_variants.py
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: novis-final-variant-diagnostic
+          name: novis-tasty-beaker-variants
           path: |
-            novis_final_variant_diagnostic.json
+            novis_tasty_beaker_variants.json
