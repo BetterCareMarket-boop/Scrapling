@@ -23,7 +23,7 @@ SOURCES=[
  {"retailer":"Assist Ability","drops":10,"kind":"shopify","rows":[10],"url":"https://shop.assistabilityaustralia.com.au/products/molicare-prem-mobile-10d-med-p14-c3"},
 ]
 def page_text(p):
- try: return re.sub(r"\\s+"," ",p.get_all_text(separator=" ",strip=True))
+ try: return re.sub(r"\s+"," ",p.get_all_text(separator=" ",strip=True))
  except Exception: return ""
 def scrape(url): return Fetcher.get(url,impersonate="chrome",stealthy_headers=True,timeout=40)
 def status(p):
@@ -41,19 +41,19 @@ def size_ok(p,v):
 def qty_ok(p,v):
  t=str(v.get("title") or "")+" "+str(v.get("option2") or "")
  count=p["count"]
- return bool(re.search(r"(?:carton|box|ctn|case)[^0-9]{0,18}"+str(count)+r"\\b|\\b"+str(count)+r"\\s*(?:units|pieces|per carton|per box)",t,re.I))
+ return bool(re.search(r"(?:carton|box|ctn|case)[^0-9]{0,18}"+str(count)+r"\b|\b"+str(count)+r"\s*(?:units|pieces|per carton|per box)",t,re.I))
 def sku_ok(p,v):
  sku=str(v.get("sku") or "")
  if not sku:return False
  codes=[p.get("sku"),p.get("alternate"),p.get("legacy")]
- return any(re.search(r"(?<!\\d)"+re.escape(c)+r"(?!\\d)",sku) for c in codes if c)
+ return any(re.search(r"(?<!\d)"+re.escape(c)+r"(?!\d)",sku) for c in codes if c)
 def run_shopify(p,src):
  page=scrape(src["url"].rstrip("/")+".js")
  if status(page)!=200:return {"status":"blocked","http_status":status(page)}
  try: data=page.json()
  except Exception as e:return {"status":"unreadable_json","http_status":status(page),"error":str(e)}
  title=str(data.get("title") or "")
- if "molicare" not in title.lower() or not re.search(r"\\b"+str(p["drops"])+r"\\s*(?:drops|d)\\b",title,re.I):
+ if "molicare" not in title.lower() or not re.search(r"\b"+str(p["drops"])+r"\s*(?:drops|d)\b",title,re.I):
   return {"status":"wrong_product","title":title}
  options=[]
  for v in data.get("variants") or []:
@@ -79,10 +79,10 @@ def run_surgical(p,src):
  t=page_text(page)
  codes=[p.get("sku"),p.get("alternate"),p.get("legacy")]
  for code in [x for x in codes if x]:
-  m=re.search(r"(?<!\\d)"+re.escape(code)+r"(?:-EA)?\\s+Carton/"+str(p["count"])+r"[^$]{0,260}\\$\\s*([0-9,]+(?:\\.[0-9]{1,2})?)",t,re.I)
+  m=re.search(r"(?<!\d)"+re.escape(code)+r"(?:-EA)?\s+Carton/"+str(p["count"])+r"[^$]{0,260}\$\s*([0-9,]+(?:\.[0-9]{1,2})?)",t,re.I)
   if m:
    excerpt=m.group(0)
-   if not re.search(r"MoliCare Premium Mobile\\s+"+re.escape(p["size"])+r"\\s+"+str(p["drops"])+r"\\s+drops",excerpt,re.I):
+   if not re.search(r"MoliCare Premium Mobile\s+"+re.escape(p["size"])+r"\s+"+str(p["drops"])+r"\s+drops",excerpt,re.I):
     continue
    return {"status":"success","price":float(m.group(1).replace(",","")),"special_price":None,"matched_sku":code,"matched_excerpt":excerpt}
  return {"status":"variant_unresolved","error":"No verified SKU + size + carton row"}
