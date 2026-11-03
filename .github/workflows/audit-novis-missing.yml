@@ -1,10 +1,10 @@
-name: Diagnose NOVIS retailers with Scrapling
+name: Recover 20 NOVIS prices with Scrapling
 on:
   workflow_dispatch:
   push:
     branches: [main]
     paths:
-      - "novis_retailer_diagnostics.py"
+      - "novis_price_recovery_20.py"
       - ".github/workflows/audit-novis-missing.yml"
 permissions:
   contents: read
@@ -18,10 +18,11 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install "scrapling[fetchers]==0.5"
-      - run: python novis_retailer_diagnostics.py
+      - run: python novis_price_recovery_20.py
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: novis-retailer-diagnostics
+          name: novis-price-recovery-20
           path: |
-            novis_retailer_diagnostics.json
+            novis_price_recovery_20.json
+            novis_price_recovery_20.csv
