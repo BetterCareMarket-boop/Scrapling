@@ -75,38 +75,32 @@ def shopify_family(prod, cand):
 def surgical_direct(prod,cand):
     page=fetch(cand["url"])
     txt=text_of(page)
-    # Require exact manufacturer code and carton quantity in the same local window.
-    hits=[m.start() for m in re.finditer(re.escape(prod["sku"]),txt,re.I)]
-    for pos in hits:
-        snip=txt[max(0,pos-120):pos+420]
-        if str(prod["carton"]) not in snip: continue
-        if "MoliCare Premium Mobile" not in snip: continue
-        vals=money_values(snip)
-        if vals:
-            regular,special=normalize(vals[:3])
-            return {"status":"success","http_status":status(page),"price":regular,"special_price":special,
-                    "matched_excerpt":snip[:360]}
-    return {"status":"price_not_found","http_status":status(page),"error":"exact SKU/carton row not safely resolved"}
+    # Parse only the exact SKU row, ending at the first quantity/Add-to-cart marker.
+    pat=(rf"{re.escape(prod['sku'])}(?:-EA)?\\s+Carton/{prod['carton']}[^$]{{0,220}}"
+         rf"MoliCare Premium Mobile\\s+{re.escape(prod['size'])}\\s+6 drops[^$]{{0,160}}\\$\\s*([0-9,]+(?:\\.[0-9]{{1,2}})?)")
+    m=re.search(pat,txt,re.I)
+    if not m:
+        return {"status":"price_not_found","http_status":status(page),"error":"exact SKU/size/carton row not safely resolved"}
+    price=float(m.group(1).replace(",",""))
+    return {"status":"success","http_status":status(page),"price":price,"special_price":None,
+            "matched_excerpt":m.group(0)[:360]}
 
 def mysupply_family(prod,cand):
     page=fetch(cand["url"])
     txt=text_of(page)
     size_map={"X-Small":"X-SMALL","Small":"SMALL","Medium":"MEDIUM","Large":"LARGE","X-Large":"XL"}
-    needle=f"MOLICARE PREMIUM MOBILE 6D {size_map[prod['size']]}"
-    pos=txt.upper().find(needle)
-    if pos<0:
-        return {"status":"variant_unresolved","http_status":status(page),"error":"exact size title not found"}
-    snip=txt[pos:pos+420]
-    if f"CARTON {prod['carton']}" not in snip.upper():
-        return {"status":"variant_mismatch","http_status":status(page),"error":"carton quantity mismatch","matched_excerpt":snip}
-    # Site often appends a pack-level suffix to the manufacturer's code, so require the base SKU prefix.
-    if prod["sku"] not in snip:
-        return {"status":"variant_mismatch","http_status":status(page),"error":"manufacturer code not present near title","matched_excerpt":snip}
-    vals=money_values(snip)
-    if not vals:
-        return {"status":"price_not_found","http_status":status(page),"matched_excerpt":snip}
-    regular,special=normalize(vals[:2])
-    return {"status":"success","http_status":status(page),"price":regular,"special_price":special,"matched_excerpt":snip[:360]}
+    sz=size_map[prod["size"]]
+    # One listing block: title -> carton qty -> code -> price. Accept retailer suffix after base manufacturer SKU.
+    pat=(rf"MOLICARE PREMIUM MOBILE 6D {re.escape(sz)}\\b[^$]{{0,240}}"
+         rf"CARTON\\s+{prod['carton']}\\s+-\\s+({re.escape(prod['sku'])}\\d*)\\s+\\$([0-9,]+(?:\\.[0-9]{{1,2}})?)")
+    m=re.search(pat,txt,re.I)
+    if not m:
+        # Detect a different carton against the requested size so we can explicitly reject it.
+        sizepos=txt.upper().find(f"MOLICARE PREMIUM MOBILE 6D {sz}")
+        snip=txt[sizepos:sizepos+320] if sizepos>=0 else ""
+        return {"status":"variant_mismatch","http_status":status(page),"error":"exact size/carton/SKU block not found","matched_excerpt":snip}
+    return {"status":"success","http_status":status(page),"price":float(m.group(2).replace(",","")),
+            "special_price":None,"matched_sku":m.group(1),"matched_excerpt":m.group(0)[:360]}
 
 def generic_exact(prod,cand):
     page=fetch(cand["url"])
