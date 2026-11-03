@@ -1,10 +1,10 @@
-name: Diagnose final 25 NOVIS mappings with Scrapling
+name: Diagnose NOVIS exact variants with Scrapling
 on:
   workflow_dispatch:
   push:
     branches: [main]
     paths:
-      - "novis_final25_diagnostics.py"
+      - "novis_final_variant_diagnostic.py"
       - ".github/workflows/audit-novis-missing.yml"
 permissions:
   contents: read
@@ -18,10 +18,10 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install "scrapling[fetchers]==0.5"
-      - run: python novis_final25_diagnostics.py
+      - run: python novis_final_variant_diagnostic.py
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: novis-final25-diagnostics
+          name: novis-final-variant-diagnostic
           path: |
-            novis_final25_diagnostics.json
+            novis_final_variant_diagnostic.json
