@@ -1,10 +1,10 @@
-name: Audit remaining 45 NOVIS retailer-specific prices
+name: Diagnose NOVIS retailers with Scrapling
 on:
   workflow_dispatch:
   push:
     branches: [main]
     paths:
-      - "novis_remaining_45_scrapling.py"
+      - "novis_retailer_diagnostics.py"
       - ".github/workflows/audit-novis-missing.yml"
 permissions:
   contents: read
@@ -18,11 +18,10 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install "scrapling[fetchers]==0.5"
-      - run: python novis_remaining_45_scrapling.py
+      - run: python novis_retailer_diagnostics.py
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: novis-remaining-45-price-audit
+          name: novis-retailer-diagnostics
           path: |
-            novis_remaining_45_results.json
-            novis_remaining_45_results.csv
+            novis_retailer_diagnostics.json
