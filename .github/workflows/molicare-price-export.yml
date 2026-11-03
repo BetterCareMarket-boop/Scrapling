@@ -1,0 +1,39 @@
+name: Export Approved MoliCare Prices
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "molicare_make_spreadsheet.py"
+      - "molicare_export_our_prices.json"
+      - ".github/workflows/molicare-price-export.yml"
+permissions:
+  contents: write
+  actions: read
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install xlsxwriter==3.2.0
+      - name: Generate spreadsheet
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python molicare_make_spreadsheet.py
+      - name: Commit Excel export
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add molicare_competitor_prices.xlsx
+          git diff --cached --quiet || git commit -m "Export approved MoliCare competitor prices"
+          git push
+      - uses: actions/upload-artifact@v4
+        with:
+          name: molicare_competitor_prices
+          path: molicare_competitor_prices.xlsx
