@@ -54,8 +54,18 @@ def shopify(p,url):
   sku=str(v.get("sku") or "")
   # Sale price accepted only for a manufacturer code and verified exact carton.
   # Shopify family titles may contain drop info in parent title or chosen variant.
-  if not sku_ok(p,sku):continue
-  if not qty_ok(p["qty"],t):continue
+  if not sku_ok(p,sku) and not (not sku and sku_ok(p,title)):continue
+  # "18 Packs Per Carton" can be verified only when an exact pack count exists
+  # in the same product listing, e.g. 18x14=252 or 12x14=168.
+  quantity=qty_ok(p["qty"],t)
+  if not quantity:
+   packs=re.search(r"(\d+)\s+packs?\s+per\s+carton",t,re.I)
+   if packs:
+    package=[x for x in j.get("variants") or [] if re.search(r"\b(\d+)\s+units?\s+per\s+pack",str(x.get("title") or ""),re.I)]
+    if len(package)==1:
+     pieces=int(re.search(r"\b(\d+)\s+units?\s+per\s+pack",str(package[0].get("title")),re.I).group(1))
+     quantity=int(packs.group(1))*pieces==p["qty"]
+  if not quantity:continue
   dropmatch=bool(re.search(r"(?<!\d)"+str(p["drops"])+r"\s*(?:d|drops?)\b",title+" "+t,re.I))
   if not dropmatch:continue
   results.append(v)
@@ -72,7 +82,7 @@ def html(p,url):
  codepos=next((t.find(code) for code in [p["sku"]]+p["aliases"] if code in t),0)
  nearby=t[max(0,codepos-300):codepos+400]
  if "vitalmedicalsupplies" in url:
-  m=re.search(r"\$\s*([0-9,]+\.\d{2})\s*inc GST\s+Supplier Part\s+"+re.escape(p["sku"])+r"\b",t,re.I)
+  m=re.search(r"\$\s*([0-9,]+\.\d{2})\s*inc GST\s+Supplier Part\s+(?:\d+\s*/OLD:)?"+re.escape(p["sku"])+r"\b",t,re.I)
   if m:return dict(status="success",price=float(m.group(1).replace(",","")),special_price=None,price_basis="inc GST",matched_excerpt=t[max(0,m.start()-120):m.end()+90])
  if "dnhc.com.au" in url:
   m=re.search(r"\$\s*([0-9,]+\.\d{2})\s*\(ex GST\)",t,re.I)
