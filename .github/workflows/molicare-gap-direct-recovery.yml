@@ -1,0 +1,21 @@
+name: MoliCare Gap Direct Recovery
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "molicare_gap_direct_recovery.py"
+      - ".github/workflows/molicare-gap-direct-recovery.yml"
+permissions:
+  contents: read
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install "scrapling[fetchers]==0.5"
+      - run: python molicare_gap_direct_recovery.py
