@@ -30,7 +30,7 @@ def skuok(sku,s):
 def fetch(u):
  return Fetcher.get(u,impersonate="chrome",stealthy_headers=True,timeout=30)
 def shopify(t,j):
- row,sku,count,ret,url=t
+ row,sku,count,ret,kind,url=t
  title=str(j.get("title") or "");vs=j.get("variants") or []
  desc=re.sub(r"\s+"," ",re.sub(r"<[^>]+>"," ",html.unescape(str(j.get("description") or ""))))
  found=[]
@@ -63,7 +63,7 @@ def shopify(t,j):
  if not cur or cur<=0:return dict(status="bad_price")
  return dict(status="success",price=round(comp,2) if comp and comp>cur else round(cur,2),special_price=round(cur,2) if comp and comp>cur else None,sku=v.get("sku"),variant=v.get("title"),url=t[5]+"?variant="+str(v.get("id")),availability=v.get("available"))
 def html_price(t,text):
- row,sku,count,ret,url=t
+ row,sku,count,ret,kind,url=t
  if row==22:
   m=re.search(r"\$\s*([0-9,]+\.\d{2})\s*inc GST\s*Supplier Part\s*168035\s*Unit CAR\s*192",text,re.I)
   return dict(status="success",price=float(m[1].replace(",","")),special_price=None,source_sku="168035 (old code)",basis="inc GST") if m else dict(status="unresolved",excerpt=text[max(0,text.find("168035")-100):text.find("168035")+170])
@@ -88,7 +88,7 @@ def html_price(t,text):
   return dict(status="unresolved",excerpt=text[max(0,text.find(sku)-50):text.find(sku)+230])
  return dict(status="unresolved")
 def do(t):
- row,sku,count,ret,url=t
+ row,sku,count,ret,kind,url=t
  res=dict(row=row,our_sku=sku,qty=count,retailer=ret,url=url)
  try:
   is_js=ret in ("Medisa","OzChemist","Assist Ability","Incontinence Products Australia")
