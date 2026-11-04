@@ -1,0 +1,21 @@
+name: MoliCare Rows 14 and 70 Carton Recovery
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "molicare_rows14_70_recovery_nov5.py"
+      - ".github/workflows/molicare-rows14-70-recovery.yml"
+permissions:
+  contents: read
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install "scrapling[fetchers]==0.5"
+      - run: python molicare_rows14_70_recovery_nov5.py
