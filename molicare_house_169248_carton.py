@@ -13,8 +13,9 @@ if int(p.status)==200:
  has_code="169248C" in t
  has_count=bool(re.search(r"Carton of 120|4\s*[x×]\s*30|120 briefs|4 packs of 30",t,re.I))
  m=re.search(r"MoliCare Premium Slip Extra Plus 6D Extra Small.{0,250}?\$\s*([0-9,]+\.\d{2})",t,re.I)
- if not m:
-  m=re.search(r"\$\s*(267\.99)\b",t)
+ if not m or float(m.group(1).replace(",",""))<=0:
+  candidates=[x for x in re.finditer(r"\$\s*([0-9,]+\.\d{2})",t) if float(x.group(1).replace(",",""))>0]
+  m=candidates[0] if candidates else None
  if has_code and has_count and m and float(m.group(1).replace(",",""))>0:
   result.update(status="success",price=float(m.group(1).replace(",","")),special_price=None,sku="169248C",qty=120)
  else:result.update(status="unresolved",code=has_code,count=has_count,match=m.group(0) if m else None)
