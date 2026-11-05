@@ -1,0 +1,22 @@
+name: DNHC MoliCare Scrapling Browser Test
+on:
+  push:
+    branches: [main]
+    paths:
+      - "dnhc_molicare_browser_test.py"
+      - ".github/workflows/dnhc-molicare-browser-test.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install "scrapling[fetchers]==0.5"
+      - run: python -m playwright install --with-deps chromium
+      - run: python dnhc_molicare_browser_test.py
