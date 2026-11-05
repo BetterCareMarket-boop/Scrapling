@@ -1,0 +1,21 @@
+name: Independence Australia Remaining MoliCare Cartons
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "molicare_independence_more_scrapling.py"
+      - ".github/workflows/molicare-independence-more-scrapling.yml"
+permissions:
+  contents: read
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 16
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install "scrapling[fetchers]==0.5"
+      - run: python molicare_independence_more_scrapling.py
