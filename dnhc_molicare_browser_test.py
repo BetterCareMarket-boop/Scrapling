@@ -1,15 +1,13 @@
-from scrapling.fetchers import StealthyFetcher, DynamicFetcher, Fetcher
+from scrapling.fetchers import StealthyFetcher, Fetcher
 import json,time
 URL="https://www.dnhc.com.au/CONTINENCE/All_dash_In_dash_One/pl.php"
 urls=[URL,"https://dnhc.com.au/CONTINENCE/All_dash_In_dash_One/pl.php"]
 result=[]
-for name,u in [("static_alt",urls[1]),("stealth",URL),("dynamic",URL)]:
+for name,u in [("static_alt",urls[1]),("stealth",URL)]:
     start=time.time()
     try:
         if name=="stealth":
             p=StealthyFetcher.fetch(u,headless=True,solve_cloudflare=True,timeout=60000)
-        elif name=="dynamic":
-            p=DynamicFetcher.fetch(u,headless=True,timeout=40000)
         else:
             p=Fetcher.get(u,impersonate="chrome",timeout=20)
         t=p.get_all_text(separator=" ",strip=True)
