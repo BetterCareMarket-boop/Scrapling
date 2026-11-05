@@ -1,0 +1,21 @@
+name: BrightSky Explicit MoliCare Prices
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "molicare_bright_direct_prices.py"
+      - ".github/workflows/molicare-brightsky-direct-prices.yml"
+permissions:
+  contents: read
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 14
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install "scrapling[fetchers]==0.5"
+      - run: python molicare_bright_direct_prices.py
